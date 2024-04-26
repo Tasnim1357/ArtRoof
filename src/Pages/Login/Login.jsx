@@ -52,7 +52,7 @@ const navigate=useNavigate()
       <Navbar></Navbar>
      <div className='flex justify-center items-center mt-16'>
      <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-1/2 border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
-      <h1 className='text-2xl font-bold text-[#2F3D7E] font-sora text-center'>Please Login</h1>
+      <h1 className='text-2xl font-bold text-[#151515] font-poppins  duration-500 hover:text-[#AF9F7B] text-center'>Please Login</h1>
           <div>
               <label htmlFor="">Email</label> <br />
               <input type="text" placeholder="Email"  className='w-full p-3 border-b-2 border-black outline-none' {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} /> 
@@ -83,7 +83,7 @@ const navigate=useNavigate()
                 </div>
       
 
-      <input type="submit" value="Sign In"   className='btn w-full bg-[#F9A51A] sm:text-2xl text-balance font-inter font-semibold duration-500 hover:bg-[#2F3D7E] hover:text-white'/>
+      <input type="submit" value="Sign In"   className='btn w-full  sm:text-2xl text-balance font-lato  bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]'/>
       <p >Do not have an account?Please <Link to='/register' className='btn-link text-lg font-sora font-bold'>Register</Link></p>
     </form>
   

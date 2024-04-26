@@ -1,13 +1,13 @@
-// import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-// import { AuthContext } from '../../Provider/AuthProvider';
+import { AuthContext } from '../../Provider/AuthProvider';
 // import { ThemeContext } from '../../Root/Root';
 // import { MdOutlineWbSunny } from "react-icons/md";
 // import { FaMoon } from "react-icons/fa";
 
 
 const Navbar = () => {
-//   const {user,logOut}=useContext(AuthContext)
+  const {user,logOut}=useContext(AuthContext)
 //   const{handleTheme,theme}=useContext(ThemeContext)
 
 
@@ -58,6 +58,7 @@ const Navbar = () => {
       
         } */}
            </li>
+           <li> <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</Link></li>
             </ul>
           </div>
           <a className=" sm:text-2xl text-4xl font-poppins text-[#2D394B]">Art<span className='text-[#AF9F7B]'>Roof</span></a>
@@ -81,26 +82,27 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end hidden lg:flex space-x-4">
-        {/* {
-            user && <div className="dropdown dropdown-hover mr-4">
-           <img src={user.photoURL} alt="" className='w-[60px] h-[60px] rounded-full border-2 p-1 border-purple-600'/>
-            <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>{user.displayName}</a></li>
-             
-            </ul>
-          </div>
-            
-          } */}
+          {
+              user && <div className="dropdown dropdown-hover mr-4">
+            <img src={user.photoURL} alt="" className='w-[50px] h-[50px] rounded-full border-2 p-1 border-yellow-600'/>
+              <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>{user.displayName}</a></li>
+                <li><Link to='/login' className="btn ont-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" >Logout</Link></li>
+              
+              </ul>
+            </div>
+              
+            }
          
 
-        {/* {
+      {
           user ?  
-          <Link to='/login' className="btn font-inter text-[#2F3D7E] font-bold text-lg duration-500 hover:bg-[#1D284D] hover:text-white" onClick={userSignOut}>Logout</Link>
+          <Link to='/login' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl hidden '>Login</Link>
         : 
-          <Link to='/login' className="btn font-inter text-[#2F3D7E] font-bold text-lg duration-500 hover:bg-[#1D284D] hover:text-white">Login</Link>
+        <Link to='/login' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Login</Link>
       
-        } */}
-        <button className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Login</button>
+        }
+       
         <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</Link>
          </div> 
          
