@@ -20,7 +20,7 @@ const Addcraft = () => {
         const newArt={name,email,image,item_name,Subcategory_Name,short_description,price,rating,customization,processing_time,stockStatus}
         console.log(newArt)
 
-        fetch('http://localhost:5000/arts',{
+        fetch('https://assignment10-server-swart.vercel.app/arts',{
             method:'POST',
             headers:{'content-type': 'application/json'},
             body: JSON.stringify(newArt)

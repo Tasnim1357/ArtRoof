@@ -7,7 +7,7 @@ const CraftItem = () => {
     useEffect(()=>{
 
         async function fetchData(){
-            const res=await fetch('http://localhost:5000/arts');
+            const res=await fetch('https://assignment10-server-swart.vercel.app/arts');
             const data= await res.json();
             setArts(data)
         }
