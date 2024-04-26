@@ -9,6 +9,8 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import Footer from '../Shared/Footer/Footer';
+import Lottie from 'lottie-react';
+import lot1 from   '../../../public/Animation - 1713676970388.json'
 // import { Helmet } from 'react-helmet-async';
 const Login = () => {
   const {createLogin,goolgeLogin,githubLogin}=useContext(AuthContext)
@@ -45,13 +47,19 @@ const navigate=useNavigate()
         })
       }
     return (
-      <div>
+   <div>
+    <Navbar></Navbar>
+     <div className='flex justify-around md:flex-row flex-col gap-1'>
          {/* <Helmet>
             <title>Dream Home | Login</title>
           </Helmet> */}
-      <Navbar></Navbar>
-     <div className='flex justify-center items-center mt-16'>
-     <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-1/2 border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
+      
+    <div>
+    <Lottie animationData={lot1} loop={true} style={{height:500}} />
+    </div>
+    <div className='md:w-1/2 w-full -mt-6'>
+    <div className='flex justify-center items-center md:mt-16 mt-2'>
+     <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-full border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
       <h1 className='text-2xl font-bold text-[#151515] font-poppins  duration-500 hover:text-[#AF9F7B] text-center'>Please Login</h1>
           <div>
               <label htmlFor="">Email</label> <br />
@@ -88,16 +96,20 @@ const navigate=useNavigate()
     </form>
   
      </div>
-     <div className='border-2 p-3 rounded-3xl text-center w-full  md:w-2/5 lg:w-1/4 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
+     <div className='border-2 p-3 rounded-3xl text-center w-full  md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
      <FcGoogle className='text-2xl' />
       <h1 className='font-bold text-[#2F3D7E] font-sora text-center  text-sm sm:text-base ' onClick={()=>socialLogin(goolgeLogin)}>Continue With Google</h1>
      </div>
-     <div className='border-2 p-3 rounded-3xl text-center w-full md:w-2/5 lg:w-1/4 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 text-sm sm:text-base duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
+     <div className='border-2 p-3 rounded-3xl text-center w-full md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 text-sm sm:text-base duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
      <FaGithub className='text-2xl' />
       <h1 className='font-bold text-[#2F3D7E] font-sora text-center' onClick={()=>socialLogin(githubLogin)}>Continue With Github</h1>
      </div>
-     <Footer></Footer>
+    </div>
+  
   </div>
+  <Footer></Footer>
+   </div>
+
     );
 };
 

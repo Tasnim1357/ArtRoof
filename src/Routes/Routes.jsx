@@ -5,6 +5,7 @@ import Home from '../Pages/Home/Home';
 import Addcraft from '../Pages/Addcraft/Addcraft';
 import Register from '../Pages/Register/Register';
 import Login from '../Pages/Login/Login';
+import Details from '../Pages/Details/Details';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
         {
           path:'/login',
           element:<Login></Login>
+        },
+        {
+          path:'/details/:id',
+          element:<Details></Details>,
+          loader:({params})=> fetch(`http://localhost:5000/arts/${params.id}`)
         }
       ]
 
