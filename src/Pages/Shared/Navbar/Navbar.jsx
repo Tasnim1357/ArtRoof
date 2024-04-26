@@ -17,7 +17,7 @@ const Navbar = () => {
     const Navlinks=<>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/'>Home</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/update'>ALL & Craft Items</Link></li>
-       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/users'>Add Craft Item</Link></li>
+       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/arts'>Add Craft Item</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/feedback'>My Art&Craft List</Link></li>
     </>
     // const userSignOut=()=>{
@@ -101,7 +101,7 @@ const Navbar = () => {
       
         } */}
         <button className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Login</button>
-        <button className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</button>
+        <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</Link>
          </div> 
          
        
