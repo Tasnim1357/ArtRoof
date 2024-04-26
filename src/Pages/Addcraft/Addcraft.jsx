@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
+import Swal from 'sweetalert2';
 
 const Addcraft = () => {
     const handleAdd=(e)=>{
@@ -15,11 +16,11 @@ const Addcraft = () => {
         const rating=form.rating.value;
         const customization=form.customization.value;
         const processing_time=form.processing_time.value;
-        const stockStatus=form.customization.value;
+        const stockStatus=form.stockStatus.value;
         const newArt={name,email,image,item_name,Subcategory_Name,short_description,price,rating,customization,processing_time,stockStatus}
         console.log(newArt)
 
-        fetch('https://coffee-server56.vercel.app/arts',{
+        fetch('http://localhost:5000/arts',{
             method:'POST',
             headers:{'content-type': 'application/json'},
             body: JSON.stringify(newArt)
@@ -117,7 +118,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>User Email <br />
                       
-                        <input type="text" placeholder='Email' name='email' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="email" placeholder='Email' name='email' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>

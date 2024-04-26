@@ -20,11 +20,11 @@ const Navbar = () => {
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/arts'>Add Craft Item</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/feedback'>My Art&Craft List</Link></li>
     </>
-    // const userSignOut=()=>{
-    //   logOut()
-    //   .then()
-    //   .catch()
-    // }
+    const userSignOut=()=>{
+      logOut()
+      .then()
+      .catch()
+    }
 
   
 
@@ -61,7 +61,7 @@ const Navbar = () => {
            <li> <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</Link></li>
             </ul>
           </div>
-          <a className=" sm:text-2xl text-4xl font-poppins text-[#2D394B]">Art<span className='text-[#AF9F7B]'>Roof</span></a>
+          <a className=" sm:text-3xl text-4xl font-semibold font-poppins text-[#2D394B]">Art<span className='text-[#AF9F7B]'>Roof</span></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 dark:text-white">
@@ -87,7 +87,7 @@ const Navbar = () => {
             <img src={user.photoURL} alt="" className='w-[50px] h-[50px] rounded-full border-2 p-1 border-yellow-600'/>
               <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a>{user.displayName}</a></li>
-                <li><Link to='/login' className="btn ont-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" >Logout</Link></li>
+                <li><Link to='/login' className="btn ont-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" onClick={ userSignOut} >Logout</Link></li>
               
               </ul>
             </div>
