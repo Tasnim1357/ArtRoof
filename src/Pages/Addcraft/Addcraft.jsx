@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Addcraft = () => {
+    const {user}=useContext(AuthContext)
     const handleAdd=(e)=>{
         e.preventDefault()
         const form =e.target;
@@ -31,7 +33,7 @@ const Addcraft = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: "Great!",
-                    text: "You added the coffee!",
+                    text: "You added the Art item!",
                     icon: "success"
                   });
             }
@@ -118,7 +120,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>User Email <br />
                       
-                        <input type="email" placeholder='Email' name='email' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="email" placeholder='Email' name='email' value={user.email} className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>
@@ -126,7 +128,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>User Name <br />
                       
-                        <input type="text" placeholder='name' name='name' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='name' name='name'  value={user.displayName} className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>

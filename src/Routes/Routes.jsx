@@ -6,6 +6,8 @@ import Addcraft from '../Pages/Addcraft/Addcraft';
 import Register from '../Pages/Register/Register';
 import Login from '../Pages/Login/Login';
 import Details from '../Pages/Details/Details';
+import Private from './Private/Private';
+import Myarts from '../Pages/Myarts/Myarts';
 
 const router = createBrowserRouter([
     {
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/arts',
-          element:<Addcraft></Addcraft>
+          element:<Private><Addcraft></Addcraft></Private>
         },
         {
           path:'/register',
@@ -30,8 +32,13 @@ const router = createBrowserRouter([
         },
         {
           path:'/details/:id',
-          element:<Details></Details>,
+          element:<Private><Details></Details></Private>,
           loader:({params})=> fetch(`http://localhost:5000/arts/${params.id}`)
+        },
+        {
+          path:'/myarts/:email',
+          element:<Private><Myarts></Myarts></Private>,
+         
         }
       ]
 

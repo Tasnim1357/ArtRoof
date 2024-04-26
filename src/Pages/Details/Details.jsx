@@ -25,9 +25,9 @@ const Details = () => {
                 
             </div>
             <div className='sm:w-3/4 w-full space-y-3 py-5'>
-                <div className='flex  justify-start items-center sm:gap-10 gap-7 '>
+                <div className='flex  justify-start items-center sm:gap-3 gap-2 '>
                     <p className='text-[#131313b3] work-sans sm:text-base text-balance'>Price:</p>
-                    <p className='text-[#131313] work-sans font-semibold sm:text-base text-balance'>{price}</p>
+                    <p className='text-[#131313] work-sans font-semibold sm:text-base text-balance'>{price}$</p>
                 </div>
                 <div className='flex justify-start items-center sm:gap-3 gap-2'>
                     <p className='text-[#131313b3] work-sans sm:text-base text-balance'>Cutomization:</p>
