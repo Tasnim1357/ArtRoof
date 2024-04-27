@@ -4,17 +4,6 @@ import Craft from '../Craft/Craft';
 const CraftItem = () => {
     const [arts,setArts]=useState([])
 
-    // useEffect(()=>{
-
-    //     async function fetchData(){
-    //         const res=await fetch('https://assignment10-server-swart.vercel.app/arts');
-    //         const data= await res.json();
-    //         setArts(data)
-    //     }
-    //     fetchData()
-
-    // },[])
-
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -49,17 +38,7 @@ const CraftItem = () => {
             )}
           
           
-          {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
-          
-            {
-                arts.slice(0, 6).map(art => (
-                    <Craft key={art._id} art={art}></Craft>
-                   
-                  ))
-            }
-
-            </div> */}
-
+         
            
        </div>
     );

@@ -10,11 +10,13 @@ import Private from './Private/Private';
 import Myarts from '../Pages/Myarts/Myarts';
 import Update from '../Pages/Update/Update';
 import AllArts from '../Pages/AllArts/AllArts';
+import Errorpage from '../Pages/Errorpage/Errorpage';
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<Errorpage></Errorpage>,
       children:[
         {
           path:'/',

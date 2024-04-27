@@ -48,7 +48,7 @@ const Addcraft = () => {
                 <form className='border-2 md:w-1/2 w-full mx-auto p-7  rounded-2xl space-y-4 ' onSubmit={handleAdd}>
                     <div>
                     <label className='font-lato text-lg'>Image <br />
-                        <input type="text" placeholder='Image' name='image' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='Image' required name='image' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                     
                     </div>
@@ -56,7 +56,7 @@ const Addcraft = () => {
                     <div>
                
                     <label className='font-lato text-lg'>Item_name <br />
-                        <input type="text" placeholder='Item_name' name='item_name' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='Item_name' required name='item_name' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                      
                     </label>
 
@@ -65,14 +65,14 @@ const Addcraft = () => {
                     <div>
                    
                     <label className='font-lato text-lg'> Subcategory_Name<br />
-                        <input type="text" placeholder='Subcategory_Name' name='subcategory_Name' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='Subcategory_Name' required name='subcategory_Name' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                       
                     </label>
                     </div>
                     <div>
                     <label  className='font-lato text-lg'> Short description <br />
                       
-                        <input type="text" placeholder='Short description' name='short_description' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='Short description' name='short_description' required className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>
@@ -80,7 +80,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'> Price <br />
                       
-                        <input type="text" placeholder='Price' name='price' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none'  />
+                        <input type="text" placeholder='Price' name='price' required className='p-2 mt-2 w-full border-b-black border-b-2 outline-none'  />
                     </label>
                  
                     </div>
@@ -88,7 +88,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>Rating<br />
                       
-                        <input type="text" placeholder='rating' name='rating'  className='p-2 mt-2 w-full border-b-black border-b-2 outline-none'  />
+                        <input type="text" placeholder='rating' name='rating' required  className='p-2 mt-2 w-full border-b-black border-b-2 outline-none'  />
                     </label>
                  
                     </div>
@@ -96,7 +96,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'> Customization <br />
                       
-                        <input type="text" placeholder='customization' name='customization' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='customization' name='customization' required className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>
@@ -104,7 +104,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>Processing_time <br />
                       
-                        <input type="text" placeholder='processing_time' name='processing_time'className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='processing_time' name='processing_time' required className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>
@@ -112,7 +112,7 @@ const Addcraft = () => {
                     <div>
                     <label className='font-lato text-lg'>StockStatus <br />
                       
-                        <input type="text" placeholder='stockStatus' name='stockStatus' className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
+                        <input type="text" placeholder='stockStatus' name='stockStatus' required className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' />
                     </label>
                  
                     </div>
