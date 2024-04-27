@@ -38,7 +38,7 @@ data-aos-duration="1500"
       
           <div className="card-actions justify-end">
           <div className='flex items-center justify-between w-full'>
-              <Link to={`details/${_id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">View Property</Link>
+              <Link to={`/details/${_id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">View Details</Link>
           </div>
           </div>
         </div>

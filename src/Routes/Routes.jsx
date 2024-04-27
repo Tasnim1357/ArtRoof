@@ -9,6 +9,7 @@ import Details from '../Pages/Details/Details';
 import Private from './Private/Private';
 import Myarts from '../Pages/Myarts/Myarts';
 import Update from '../Pages/Update/Update';
+import AllArts from '../Pages/AllArts/AllArts';
 
 const router = createBrowserRouter([
     {
@@ -43,8 +44,13 @@ const router = createBrowserRouter([
         },
         {
           path:'/update/:id',
-          element:<Update></Update>,
+          element:<Private><Update></Update></Private>,
           loader:({params})=>fetch(`http://localhost:5000/arts/${params.id}`)
+        },
+        {
+          path:'/allarts',
+          element:<AllArts></AllArts>,
+          loader:()=>fetch(`https://assignment10-server-swart.vercel.app/arts`)
         }
       ]
 

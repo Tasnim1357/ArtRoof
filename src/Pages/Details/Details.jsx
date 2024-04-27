@@ -9,7 +9,7 @@ const Details = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='h-[70vh] mt-10 p-0 sm:p-5 flex md:flex-row flex-col justify-between gap-10 mb-7'>
+            <div className='md:h-[70vh] mt-10 p-0 sm:p-5 flex md:flex-row flex-col justify-between gap-10 mb-7'>
            <div className='h-full md:w-1/2 w-full'>
            <img src={image} alt="" className='h-full rounded-2xl w-full' />
            </div>

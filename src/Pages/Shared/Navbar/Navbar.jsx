@@ -16,7 +16,7 @@ const Navbar = () => {
 //   };
     const Navlinks=<>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/'>Home</Link></li>
-       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/update'>ALL Arts & Craft Items</Link></li>
+       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/allarts'>ALL Arts & Craft Items</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/arts'>Add Craft Item</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to={`/myarts/${user?.email}`}>My Art&Craft List</Link></li>
     </>
