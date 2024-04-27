@@ -16,7 +16,7 @@ const Navbar = () => {
 //   };
     const Navlinks=<>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/'>Home</Link></li>
-       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/update'>ALL & Craft Items</Link></li>
+       <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/update'>ALL Arts & Craft Items</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to='/arts'>Add Craft Item</Link></li>
        <li className='font-lato text-[#2D394B] duration-500 hover:text-[#AF9F7B] font-base text-xl '><Link to={`/myarts/${user?.email}`}>My Art&Craft List</Link></li>
     </>
@@ -50,13 +50,13 @@ const Navbar = () => {
 
         </li> */}
         <li>
-        {/* {
+        {
           user ?  
-          <Link to='/login' className="btn font-inter text-[#2F3D7E] font-bold text-lg duration-500 hover:bg-[#1D284D] hover:text-white" onClick={userSignOut}>Logout</Link>
+          <Link to='/login' className="btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" onClick={userSignOut}>Logout</Link>
         : 
-          <Link to='/login' className="btn font-inter text-[#2F3D7E] font-bold text-lg duration-500 hover:bg-[#1D284D] hover:text-white">Login</Link>
+          <Link to='/login' className="btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl">Login</Link>
       
-        } */}
+        }
            </li>
            <li> <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl '>Register</Link></li>
             </ul>
@@ -87,7 +87,7 @@ const Navbar = () => {
             <img src={user.photoURL} alt="" className='w-[50px] h-[50px] rounded-full border-2 p-1 border-yellow-600'/>
               <ul tabIndex={0} className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li><a>{user.displayName}</a></li>
-                <li><Link to='/login' className="btn ont-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" onClick={ userSignOut} >Logout</Link></li>
+                <li><Link to='/login' className="btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-xl" onClick={ userSignOut} >Logout</Link></li>
               
               </ul>
             </div>

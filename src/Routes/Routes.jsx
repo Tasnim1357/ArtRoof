@@ -8,6 +8,7 @@ import Login from '../Pages/Login/Login';
 import Details from '../Pages/Details/Details';
 import Private from './Private/Private';
 import Myarts from '../Pages/Myarts/Myarts';
+import Update from '../Pages/Update/Update';
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
           path:'/myarts/:email',
           element:<Private><Myarts></Myarts></Private>,
          
+        },
+        {
+          path:'/update/:id',
+          element:<Update></Update>,
+          loader:({params})=>fetch(`http://localhost:5000/arts/${params.id}`)
         }
       ]
 

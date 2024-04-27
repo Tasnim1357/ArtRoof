@@ -1,9 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
+import Swal from 'sweetalert2';
 
-const ArtItem = ({art}) => {
+const ArtItem = ({art,item,setItem}) => {
     const {_id,image,item_name,price,rating,customization,stockStatus}=art
+    const handleDel=(_id)=>{
+      console.log(_id)
+      Swal.fire({
+          title: "Do you want to delete the Art?",
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: "Delete",
+          denyButtonText: `Don't Delete`
+        }).then((result) => {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
+         
+           fetch(`http://localhost:5000/arts/${_id}`,{
+              method: `DELETE`
+           })
+           .then(res=> res.json())
+           .then(data=>{
+              console.log(data)
+              if(data.deletedCount>0){
+                  Swal.fire("Deleted!", "", "success");
+               }
+               const remaining=item.filter(cof=>cof._id !== _id)
+               setItem(remaining)
+          })
+         
+      } else if (result.isDenied) {
+            Swal.fire("Not deleted", "", "info");
+          }
+        });
+ }
     return (
         <div className="card  bg-base-100 shadow-xl overflow-hidden " 
        >
@@ -35,8 +66,8 @@ const ArtItem = ({art}) => {
       
           <div className="card-actions justify-end">
           <div className='flex items-center justify-between w-full'>
-              <Link to={`details/${_id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">Update</Link>
-              <Link to={`details/${_id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">Delete</Link>
+              <Link to={`/update/${_id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">Update</Link>
+              <Link  className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]" onClick={()=>handleDel(_id)}>Delete</Link>
           </div>
           </div>
         </div>
