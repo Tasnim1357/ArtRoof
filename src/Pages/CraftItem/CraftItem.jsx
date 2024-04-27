@@ -4,21 +4,52 @@ import Craft from '../Craft/Craft';
 const CraftItem = () => {
     const [arts,setArts]=useState([])
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        async function fetchData(){
-            const res=await fetch('https://assignment10-server-swart.vercel.app/arts');
-            const data= await res.json();
-            setArts(data)
+    //     async function fetchData(){
+    //         const res=await fetch('https://assignment10-server-swart.vercel.app/arts');
+    //         const data= await res.json();
+    //         setArts(data)
+    //     }
+    //     fetchData()
+
+    // },[])
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await fetch('https://assignment10-server-swart.vercel.app/arts');
+                const data = await res.json();
+                setArts(data);
+                setLoading(false); // Set loading state to false when data fetching is complete
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                setLoading(false); // Set loading state to false if there's an error
+            }
         }
-        fetchData()
-
-    },[])
-    console.log(arts)
+        fetchData();
+    }, []);
+    
     return (
         <div className='mt-16 space-y-8'>
             <h1 className='sm:text-5xl text-3xl text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'>Explore Our Arts and Paint</h1>
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
+          
+            {loading ? ( // Show loader when data is loading
+                <div className="text-center mt-10">
+                    <span className="loading loading-spinner loading-lg"></span>
+                </div>
+            ) : (
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
+                    {arts.slice(0, 6).map(art => (
+                        <Craft key={art._id} art={art}></Craft>
+                    ))}
+                </div>
+            )}
+          
+          
+          {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
           
             {
                 arts.slice(0, 6).map(art => (
@@ -27,7 +58,7 @@ const CraftItem = () => {
                   ))
             }
 
-            </div>
+            </div> */}
 
            
        </div>
