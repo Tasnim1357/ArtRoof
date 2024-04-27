@@ -26,7 +26,7 @@ const Update = () => {
         const updatedArt={image,item_name,Subcategory_Name,short_description,price,rating,customization,processing_time,stockStatus}
         console.log(updatedArt)
 
-        fetch(`http://localhost:5000/arts/${_id}`,{
+        fetch(`https://assignment10-server-swart.vercel.app/arts/${_id}`,{
             method:'PUT',
             headers:{'content-type': 'application/json'},
             body: JSON.stringify(updatedArt)

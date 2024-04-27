@@ -35,7 +35,7 @@ const filterArtsByCustomization = () => {
     if (showCustomization === null) {
         return arts; // Show all data if no filter applied
     } else {
-        return arts.filter(art => art.customization === (showCustomization ? "yes" : "no"));
+        return arts.filter(art => art.customization.toLowerCase() === (showCustomization ? "yes" : "no"));
     }
 };
 

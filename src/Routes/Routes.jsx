@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<Private><Update></Update></Private>,
-          loader:({params})=>fetch(`http://localhost:5000/arts/${params.id}`)
+          loader:({params})=>fetch(`https://assignment10-server-swart.vercel.app/arts/${params.id}`)
         },
         {
           path:'/allarts',

@@ -17,7 +17,7 @@ const ArtItem = ({art,item,setItem}) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
          
-           fetch(`http://localhost:5000/arts/${_id}`,{
+           fetch(`https://assignment10-server-swart.vercel.app/arts/${_id}`,{
               method: `DELETE`
            })
            .then(res=> res.json())
