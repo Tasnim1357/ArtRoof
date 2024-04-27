@@ -15,11 +15,11 @@ const Banner = () => {
         <div className='mt-10 '>
             <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
-    //   autoplay={{delay:2000}}
+      autoplay={{delay:2000}}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}

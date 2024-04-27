@@ -23,18 +23,7 @@ const CraftItem = () => {
             {
                 arts.slice(0, 6).map(art => (
                     <Craft key={art._id} art={art}></Craft>
-                    // <div key={art.item_name}>
-                    //   <img src={art.image}/>
-                    //   <p>{art.item_name}</p>
-                    //   <p>Subcategory: {art.Subcategory_Name}</p>
-                    //   <p>Description: {art.short_description}</p>
-                    //   <p>Price: {art.price}</p>
-                    //   <p>Rating: {art.rating}</p>
-                    //   <p>Customization: {art.customization}</p>
-                    //   <p>Processing Time: {art.processing_time}</p>
-                    //   <p>Stock Status: {art.stockStatus}</p>
-                    
-                    // </div>
+                   
                   ))
             }
 

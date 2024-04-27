@@ -8,7 +8,7 @@ const Myarts = () => {
     const {user}=useContext(AuthContext)
     const [item, setItem]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/myarts/${user?.email}`)
+        fetch(`https://assignment10-server-swart.vercel.app/myarts/${user?.email}`)
         .then(res=>res.json())
         .then(data=>setItem(data))
     },[user])

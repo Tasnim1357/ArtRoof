@@ -6,6 +6,9 @@ const Craft = ({art}) => {
     const {_id,image,item_name,Subcategory_Name,price,rating,stockStatus}=art
     return (
         <div className="card  bg-base-100 shadow-xl overflow-hidden " 
+        data-aos="fade-down"
+data-aos-easing="linear"
+data-aos-duration="1500"
        >
            <div className='bg-[#2D394B] text-white w-28 rounded-xl transform translate-y-12 ml-4 p-2 '>{stockStatus}</div>
         <figure className='px-3 h-min overflow-hidden rounded-md w-full'>
@@ -44,7 +47,5 @@ const Craft = ({art}) => {
 };
 
 export default Craft;
-// data-aos="fade-down"
-//data-aos-easing="linear"
-//data-aos-duration="1500"
+
 
