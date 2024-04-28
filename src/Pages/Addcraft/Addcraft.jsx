@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Provider/AuthProvider';
+import Footer from '../Shared/Footer/Footer';
 
 const Addcraft = () => {
     const {user}=useContext(AuthContext)
@@ -147,6 +148,7 @@ const Addcraft = () => {
                     </div>
                 </form>
             </div>
+            <Footer></Footer>
             
         </div>
     );

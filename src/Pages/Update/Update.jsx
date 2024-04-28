@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Swal from 'sweetalert2';
 import { useLoaderData, useParams } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 const Update = () => {
  
@@ -138,6 +139,7 @@ const Update = () => {
                 </div>
             </form>
         </div>
+        <Footer></Footer>
         
     </div>
     );
