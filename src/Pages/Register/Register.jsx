@@ -9,7 +9,7 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import Footer from './../Shared/Footer/Footer';
 import Lottie from 'lottie-react';
 import lot2 from   '../../../public/Animation - 1714151821488.json'
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 const Register = () => {
 const {createUser,profile,setLoading}=useContext(AuthContext)
 const [showPassword,setShowPassword]=useState(false)
@@ -37,9 +37,9 @@ const [showPassword,setShowPassword]=useState(false)
 
     return (
     <div >
-         {/* <Helmet>
-            <title>Dream Home | Register</title>
-          </Helmet> */}
+         <Helmet>
+            <title>ArtRoof | Register</title>
+          </Helmet>
       <Navbar></Navbar>
       <div className='flex justify-around md:flex-row flex-col gap-1 mt-16'>
       <div>

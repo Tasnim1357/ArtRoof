@@ -3,6 +3,7 @@ import Navbar from '../Shared/Navbar/Navbar';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Provider/AuthProvider';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Addcraft = () => {
     const {user}=useContext(AuthContext)
@@ -43,6 +44,9 @@ const Addcraft = () => {
     }
     return (
         <div>
+             <Helmet>
+            <title>ArtRoof | Addcraft</title>
+          </Helmet>
             <Navbar></Navbar>
             <h1 className='sm:text-3xl text-xl dark:text-white text-[#151515] font-poppins font-bold mt-10  duration-500 hover:text-[#AF9F7B] text-center'>Add Your Art & Craft Item</h1>
             <div className='flex justify-center items-center mt-10'>

@@ -2,12 +2,16 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Details = () => {
     const art= useLoaderData()
     const {_id,image,item_name,name,email,Subcategory_Name,price,rating,stockStatus,customization,processing_time,short_description}=art
     return (
         <div>
+             <Helmet>
+            <title>ArtRoof | Details</title>
+          </Helmet>
             <Navbar></Navbar>
             <div className='md:h-[80vh] dark:border dark:border-white dark:rounded-2xl mt-10 p-2 sm:p-5 flex md:flex-row flex-col justify-between gap-10 mb-7 dark:text-white'>
            <div className='h-full md:w-1/2 w-full'>

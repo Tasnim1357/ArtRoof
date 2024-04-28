@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const AllArts = () => {
 
     const arts = useLoaderData();
-    // const [loading, setLoading] = useState(true);
-
-  
-    // setTimeout(() => {
-    //     setLoading(false);
-    // }, 1000); 
+     
     const loading = arts === undefined; 
 
     return (
        <div>
+         <Helmet>
+            <title>ArtRoof | All Arts</title>
+          </Helmet>
         <Navbar></Navbar>
          <div className='mt-16 space-y-8'>
         <h1 className='sm:text-5xl text-3xl text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'> Arts and Paints of all users</h1>

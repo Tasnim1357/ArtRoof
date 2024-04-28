@@ -3,6 +3,7 @@ import Navbar from '../Shared/Navbar/Navbar';
 import Swal from 'sweetalert2';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
  
@@ -47,6 +48,9 @@ const Update = () => {
     }
     return (
         <div>
+             <Helmet>
+            <title>ArtRoof | Update</title>
+          </Helmet>
         <Navbar></Navbar>
         <h1 className='sm:text-3xl text-xl text-[#151515] font-poppins dark:text-white font-bold mt-10  duration-500 hover:text-[#AF9F7B] text-center'>Update Your Art & Craft Item</h1>
         <div className='flex justify-center items-center mt-10'>

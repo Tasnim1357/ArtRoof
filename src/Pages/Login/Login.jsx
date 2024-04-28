@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import Footer from '../Shared/Footer/Footer';
 import Lottie from 'lottie-react';
 import lot1 from   '../../../public/Animation - 1713676970388.json'
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
   const {createLogin,goolgeLogin,githubLogin}=useContext(AuthContext)
   const [showPassword,setShowPassword]=useState(false)
@@ -50,9 +50,9 @@ const navigate=useNavigate()
    <div>
     <Navbar></Navbar>
      <div className='flex justify-around md:flex-row flex-col gap-1'>
-         {/* <Helmet>
-            <title>Dream Home | Login</title>
-          </Helmet> */}
+         <Helmet>
+            <title>ArtRoof | Login</title>
+          </Helmet>
       
     <div>
     <Lottie animationData={lot1} loop={true} style={{height:500}} />

@@ -3,6 +3,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import ArtItem from '../ArtItem/ArtItem';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
+import { Helmet } from 'react-helmet-async';
 
 const Myarts = () => {
 
@@ -44,6 +45,9 @@ const filterArtsByCustomization = () => {
 
     return (
         <div>
+             <Helmet>
+            <title>ArtRoof | My art list</title>
+          </Helmet>
             <Navbar></Navbar>
            <div className='flex md:justify-end mt-2'>
            <details className="dropdown">

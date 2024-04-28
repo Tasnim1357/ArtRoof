@@ -6,10 +6,14 @@ import About from '../About/About';
 import Works from '../Works/Works';
 import CraftItem from '../CraftItem/CraftItem';
 import Categories from '../Categories/Categories';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
+             <Helmet>
+            <title>ArtRoof | Home</title>
+          </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
          

@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
 import Card2 from '../Card2/Card2';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const CategoryPage = () => {
     const [loading, setLoading] = useState(true);
@@ -14,6 +15,9 @@ const CategoryPage = () => {
   
     return (
        <div>
+         <Helmet>
+            <title>ArtRoof | Categories</title>
+          </Helmet>
         <Navbar></Navbar>
          <div className='mt-16'>
             
