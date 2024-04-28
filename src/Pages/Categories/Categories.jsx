@@ -8,7 +8,7 @@ const Categories = () => {
             useEffect(()=>{
 
                 async function fetchData(){
-                    const res=await fetch('http://localhost:5000/subCategories');
+                    const res=await fetch('https://assignment10-server-swart.vercel.app/subCategories');
                     const data= await res.json();
                     setCategory(data)
                 }

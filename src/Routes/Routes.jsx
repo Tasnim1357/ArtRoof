@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         {
           path:`/category/:Subcategory_Name`,
           element:<CategoryPage></CategoryPage>,
-          loader:({params})=>fetch(`http://localhost:5000/category/${params.Subcategory_Name}`)
+          loader:({params})=>fetch(`https://assignment10-server-swart.vercel.app/category/${params.Subcategory_Name}`)
         }
       ]
 

@@ -61,7 +61,7 @@ const Navbar = () => {
            <li> <Link to='/register' className='btn font-lato bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B] font-base text-lg '>Register</Link></li>
             </ul>
           </div>
-          <a className=" sm:text-3lg text-4xl font-semibold font-poppins text-[#2D394B]">Art<span className='text-[#AF9F7B]'>Roof</span></a>
+          <a className=" sm:text-3lg text-4xl font-semibold font-poppins text-[#2D394B] dark:text-white">Art<span className='text-[#AF9F7B]'>Roof</span></a>
         </div>
         <div className="navbar-center hidden lg:flex w-[67%]">
           <ul className="menu menu-horizontal px-1 dark:text-white">
