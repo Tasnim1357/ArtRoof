@@ -66,9 +66,7 @@ const filterArtsByCustomization = () => {
                     {filterArtsByCustomization().map(art => (
                         <ArtItem key={art._id} art={art} item={arts} setItem={setItem} />
                     ))}
-                {/* {arts.map(art => (
-                        <ArtItem key={art._id} art={art} item={arts} setItem={setItem} />
-                    ))} */}
+              
             </div>)
             }
            

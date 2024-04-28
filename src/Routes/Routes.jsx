@@ -11,6 +11,7 @@ import Myarts from '../Pages/Myarts/Myarts';
 import Update from '../Pages/Update/Update';
 import AllArts from '../Pages/AllArts/AllArts';
 import Errorpage from '../Pages/Errorpage/Errorpage';
+import CategoryPage from '../Pages/CategoryPage/CategoryPage';
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
           path:'/allarts',
           element:<AllArts></AllArts>,
           loader:()=>fetch(`https://assignment10-server-swart.vercel.app/arts`)
+        },
+        {
+          path:`/category/:Subcategory_Name`,
+          element:<CategoryPage></CategoryPage>,
+          loader:({params})=>fetch(`http://localhost:5000/category/${params.Subcategory_Name}`)
         }
       ]
 
