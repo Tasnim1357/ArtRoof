@@ -70,7 +70,7 @@ const Update = () => {
                
                 <label className='font-lato text-lg dark:text-white'> Subcategory_Name<br />
                     {/* <input type="text" placeholder='Subcategory_Name' name='subcategory_Name'defaultValue={Subcategory_Name} className='p-2 mt-2 w-full border-b-black border-b-2 outline-none' /> */}
-                    <select name="subcategory_Name" className='dark:text-black w-full p-2 mt-2' id="cars">
+                    <select name="subcategory_Name" defaultValue={Subcategory_Name} className='dark:text-black w-full p-2 mt-2' id="cars">
     <option value="Landscape Painting">Landscape Painting</option>
     <option value="Portrait Drawing">Portrait Drawing</option>
     <option value="Watercolour Painting">Watercolour Painting</option>
@@ -78,6 +78,7 @@ const Update = () => {
     <option value="Charcoal Sketching">Charcoal Sketching</option>
     <option value="Cartoon Drawing">Cartoon Drawing</option>
   </select>
+             
                 </label>
                 </div>
                 <div>

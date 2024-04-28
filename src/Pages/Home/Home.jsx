@@ -5,14 +5,17 @@ import Footer from '../Shared/Footer/Footer';
 import About from '../About/About';
 import Works from '../Works/Works';
 import CraftItem from '../CraftItem/CraftItem';
+import Categories from '../Categories/Categories';
 
 const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
             <Banner></Banner>
-            <Works></Works>
+         
             <CraftItem></CraftItem>
+            <Categories></Categories>
+            <Works></Works>
             <About></About>
             <Footer></Footer>
         </div>

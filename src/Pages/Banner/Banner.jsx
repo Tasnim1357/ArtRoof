@@ -9,17 +9,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
     return (
         <div className='mt-10 '>
             <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
-      autoplay={{delay:2000}}
+      // autoplay={{delay:2000}}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
@@ -32,7 +33,17 @@ const Banner = () => {
             <div className='bg-black/60 sm:w-1/2  space-y-5 sm:p-5 p-1 rounded-2xl w-full'>
                 <p className='text-white text-lg md:text-8xl font-bold font-poppins' style={
                   {lineHeight:1.1}
-                }>Art Gallery</p>
+                }>Art {' '} <span className='text-[#AF9F7B]'>
+                  <Typewriter
+            words={['Roof', 'Scape', 'Gallery', 'Oasis!']}
+            loop={5}
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+           
+          />
+                  </span></p>
                 <p className='text-white text-xs md:text-2xl font-light font-poppins'>Showcasing Our Best Sells <br /><span className='font-poppins font-semibold md:text-4xl text-lg'> of Modern Art</span></p>
             </div>
         </div>
