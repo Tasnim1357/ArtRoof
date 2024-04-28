@@ -48,25 +48,25 @@ const [showPassword,setShowPassword]=useState(false)
          <div className='md:w-1/2 w-full -mt-6'>
          <div className='flex justify-center items-center mt-10'>
          <form onSubmit={handleSubmit(onSubmit)} className=' w-full md:w-full border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
-          <h1 className='text-2xl font-bold text-[#151515] font-poppins  duration-500 hover:text-[#AF9F7B] text-center'>Create An Account</h1>
+          <h1 className='text-2xl font-bold text-[#151515] dark:text-white font-poppins  duration-500 hover:text-[#AF9F7B] text-center'>Create An Account</h1>
               <div>
-                  <label htmlFor="">Name</label> <br />
+                  <label htmlFor="" className='dark:text-white'>Name</label> <br />
                   <input type="text" placeholder="Name" className='w-full p-3 border-b-2 border-black outline-none' {...register("name",{required:true})} />
                   {errors.name && <p role="alert" className='text-red-600 text-lg'>This field required</p>}
               </div>
              
               <div>
-                  <label htmlFor="">Email</label> <br />
+                  <label htmlFor="" className='dark:text-white'>Email</label> <br />
                   <input type="text" placeholder="Email"  className='w-full p-3 border-b-2 border-black outline-none' {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} /> 
                   {errors.Email && <p role="alert" className='text-red-600 text-lg'>Please give valid Email</p>}
               </div>
               <div>
-                  <label htmlFor="">photo URL</label> <br />
+                  <label htmlFor="" className='dark:text-white'>photo URL</label> <br />
                   <input type="text" placeholder="Photo"  className='w-full p-3 border-b-2 border-black outline-none' {...register("Photo",{required:true})} />
                   {errors.Photo && <p role="alert" className='text-red-600 text-lg'>This field required</p>}
               </div>
               <div className='relative'>
-                  <label htmlFor="">Password</label> <br />
+                  <label htmlFor="" className='dark:text-white'>Password</label> <br />
                   <input 
                   type={ showPassword ?"text" :"password" }
                   placeholder="Password"  className='w-full p-3 border-b-2 border-black outline-none' {...register('password', { 
@@ -92,7 +92,7 @@ const [showPassword,setShowPassword]=useState(false)
         
     
           <input type="submit" value="Create an acoount" className='btn w-full font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]'/>
-          <p>Already have an account?Please <Link to='/login' className='btn-link text-lg font-sora font-bold'>Sign In</Link></p>
+          <p className='dark:text-white'>Already have an account?Please <Link to='/login' className='btn-link text-lg font-sora font-bold'>Sign In</Link></p>
         </form>
       
          </div>

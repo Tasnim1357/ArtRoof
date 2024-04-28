@@ -3,7 +3,7 @@ import React from 'react';
 const Works = () => {
     return (
        <div className='mt-16 space-y-8'>
-       <h1 className='sm:text-5xl text-3xl text-[#151515] font-poppins font-bold text-left duration-500 hover:text-[#AF9F7B]'>Works of Artists</h1>
+       <h1 className='sm:text-5xl text-3xl dark:text-white text-[#151515] font-poppins font-bold text-left duration-500 hover:text-[#AF9F7B]'>Works of Artists</h1>
 
 
          <div className='h-screen grid md:grid-cols-12 grid-cols-1 gap-5 ' >

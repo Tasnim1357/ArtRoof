@@ -24,19 +24,19 @@ const AllArts = () => {
 <div className="overflow-x-auto">
                     {loading ? (
                         <div className="text-center mt-10">
-                            <span className="loading loading-spinner loading-lg"></span>
+                            <span className="loading loading-spinner loading-lg dark:text-white"></span>
                         </div>
                     ) : (
-                        <table className="table">
+                        <table className="table dark:text-white dark:border dark:border-white">
                             {/* head */}
                             <thead>
                                 <tr>
-                                    <th>SL No</th>
-                                    <th>Item Name</th>
-                                    <th>Subcategory Name</th>
-                                    <th>Price</th>
-                                    <th>Stock Status</th>
-                                    <th>Details</th>
+                                    <th className='dark:text-white'>SL No</th>
+                                    <th className='dark:text-white'>Item Name</th>
+                                    <th className='dark:text-white'>Subcategory Name</th>
+                                    <th className='dark:text-white'>Price</th>
+                                    <th className='dark:text-white'>Stock Status</th>
+                                    <th className='dark:text-white'>Details</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,7 +45,7 @@ const AllArts = () => {
                                         <th>{idx + 1}</th>
                                         <td>{art.item_name}</td>
                                         <td>{art.Subcategory_Name}</td>
-                                        <td>{art.price}</td>
+                                        <td>{art.price}$</td>
                                         <td>{art.stockStatus}</td>
                                         <td> <Link to={`/details/${art._id}`} className="btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">View Details</Link></td>
                                     </tr>

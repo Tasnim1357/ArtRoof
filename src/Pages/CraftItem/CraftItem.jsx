@@ -23,7 +23,7 @@ const CraftItem = () => {
     
     return (
         <div className='mt-16 space-y-8'>
-            <h1 className='sm:text-5xl text-3xl text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'>Explore Our Arts and Paint</h1>
+            <h1 className='sm:text-5xl text-3xl dark:text-white text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'>Explore Our Arts and Paint</h1>
           
             {loading ? ( // Show loader when data is loading
                 <div className="text-center mt-10">

@@ -36,18 +36,18 @@ const ArtItem = ({art,item,setItem}) => {
         });
  }
     return (
-        <div className="card  bg-base-100 shadow-xl overflow-hidden " 
+        <div className="card  bg-base-100 shadow-xl overflow-hidden  dark:bg-black dark:border dark:border-white" 
        >
            <div className='bg-[#2D394B] text-white w-28 rounded-xl transform translate-y-12 ml-4 p-2 '>{stockStatus}</div>
         <figure className='px-3 h-min overflow-hidden rounded-md w-full'>
          <img src={image} alt="Shoes" className='w-full h-[300px] rounded-xl hover:scale-125 transition-all  duration-500 cursor-pointer' /></figure>
-        <div className="card-body sm:px-5 px-3">
+        <div className="card-body sm:px-5 px-3 dark:text-white">
         <div className='pb-3 border-b-2'>
         <h2 className="card-title text-2xl font-lato font-bold">{item_name}</h2>
           <p className='text-[#838181] text-balance lg:text-lg font-inter'>Customizable: {customization}</p>
         </div>
          <div className='flex justify-between items-center pb-3 border-b-2'>
-            <p className='text-black text-lg font-inter font-semibold'>Price: {price}$</p>
+            <p className='text-black text-lg font-inter font-semibold dark:text-white'>Price: {price}$</p>
            <div className='flex items-center space-x-2'>
            <p className='text-[#838181] text-base font-inter mt-1'>{rating}</p>
             <ReactStars

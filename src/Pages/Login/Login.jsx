@@ -59,15 +59,15 @@ const navigate=useNavigate()
     </div>
     <div className='md:w-1/2 w-full -mt-6'>
     <div className='flex justify-center items-center md:mt-16 mt-2'>
-     <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-full border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
-      <h1 className='text-2xl font-bold text-[#151515] font-poppins  duration-500 hover:text-[#AF9F7B] text-center'>Please Login</h1>
+     <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-full dark:border-white border-2 md:p-8 p-2 space-y-3 grid grid-cols-1 rounded-2xl'>
+      <h1 className='text-2xl font-bold text-[#151515] font-poppins  duration-500 hover:text-[#AF9F7B] text-center dark:text-white'>Please Login</h1>
           <div>
-              <label htmlFor="">Email</label> <br />
+              <label htmlFor="" className='dark:text-white'>Email</label> <br />
               <input type="text" placeholder="Email"  className='w-full p-3 border-b-2 border-black outline-none' {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} /> 
               {errors.Email && <p role="alert" className='text-red-600 text-lg '>Please Give valid Email</p>}
           </div>
           <div className='relative'>
-                <label htmlFor="">Password</label> <br />
+                <label htmlFor="" className='dark:text-white'>Password</label> <br />
                 <input 
                 type={ showPassword ?"text" :"password" }
                 placeholder="Password"  className='w-full p-3 border-b-2 border-black outline-none' {...register('password', { 
@@ -92,17 +92,17 @@ const navigate=useNavigate()
       
 
       <input type="submit" value="Sign In"   className='btn w-full  sm:text-2xl text-balance font-lato  bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]'/>
-      <p >Do not have an account?Please <Link to='/register' className='btn-link text-lg font-sora font-bold'>Register</Link></p>
+      <p className='dark:text-white'>Do not have an account?Please <Link to='/register' className='btn-link text-lg font-sora font-bold'>Register</Link></p>
     </form>
   
      </div>
-     <div className='border-2 p-3 rounded-3xl text-center w-full  md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
+     <div className='border-2 p-3 rounded-3xl text-center w-full  md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 duration-500 hover:bg-[#6e85d5] hover:border hover:border-green-600 cursor-pointer'>
      <FcGoogle className='text-2xl' />
-      <h1 className='font-bold text-[#2F3D7E] font-sora text-center  text-sm sm:text-base ' onClick={()=>socialLogin(goolgeLogin)}>Continue With Google</h1>
+      <h1 className='font-bold text-[#2F3D7E] font-sora text-center  text-sm sm:text-base dark:text-white ' onClick={()=>socialLogin(goolgeLogin)}>Continue With Google</h1>
      </div>
-     <div className='border-2 p-3 rounded-3xl text-center w-full md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 text-sm sm:text-base duration-500 hover:bg-[#F6F8FF] hover:border hover:border-green-600 cursor-pointer'>
-     <FaGithub className='text-2xl' />
-      <h1 className='font-bold text-[#2F3D7E] font-sora text-center' onClick={()=>socialLogin(githubLogin)}>Continue With Github</h1>
+     <div className='border-2 p-3 rounded-3xl text-center w-full md:w-full lg:w-1/2 mx-auto mt-4 border-gray-300 flex justify-center items-center space-x-4 text-sm sm:text-base duration-500  hover:bg-[#6e85d5] hover:border hover:border-green-600 cursor-pointer'>
+     <FaGithub className='text-2xl dark:text-white ' />
+      <h1 className='font-bold text-[#2F3D7E] font-sora text-center dark:text-white' onClick={()=>socialLogin(githubLogin)}>Continue With Github</h1>
      </div>
     </div>
   

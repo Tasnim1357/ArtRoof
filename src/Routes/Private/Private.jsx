@@ -8,7 +8,7 @@ const Private = ({children}) => {
    
     if(loading){
         return <div className='flex justify-center items-center'>
-            <span className="loading loading-dots loading-lg"></span>
+            <span className="loading loading-dots loading-lg dark:text-white"></span>
         </div>
     }
     

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Craft = ({art}) => {
     const {_id,image,item_name,Subcategory_Name,price,rating,stockStatus}=art
     return (
-        <div className="card  bg-base-100 shadow-xl overflow-hidden " 
+        <div className="card  bg-base-100 shadow-xl overflow-hidden dark:bg-black dark:text-white dark:border dark:border-white " 
         data-aos="fade-down"
 data-aos-easing="linear"
 data-aos-duration="1500"
@@ -19,7 +19,7 @@ data-aos-duration="1500"
           <p className='text-[#838181] text-balance lg:text-lg font-inter'>{Subcategory_Name}</p>
         </div>
          <div className='flex justify-between items-center pb-3 border-b-2'>
-            <p className='text-black text-lg font-inter font-semibold'>Price: {price}$</p>
+            <p className='text-black text-lg font-inter font-semibold dark:text-white'>Price: {price}$</p>
            <div className='flex items-center space-x-2'>
            <p className='text-[#838181] text-base font-inter mt-1'>{rating}</p>
             <ReactStars

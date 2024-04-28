@@ -48,9 +48,9 @@ const filterArtsByCustomization = () => {
            <div className='flex md:justify-end mt-2'>
            <details className="dropdown">
   <summary className="m-1 btn font-lato sm:text-xl text-balance bg-[#AF9F7B] text-[#2D394B] duration-500 hover:text-[#AF9F7B] hover:bg-[#2D394B]">filter by customization</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li><button onClick={() => setShowCustomization(true)}>Yes</button></li>
-    <li><button onClick={() => setShowCustomization(false)}>No</button></li>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 dark:bg-black dark:border-white dark:border  dark:text-white rounded-box w-52">
+    <li><button onClick={() => setShowCustomization(true)} className='dark:text-white'>Yes</button></li>
+    <li><button onClick={() => setShowCustomization(false)} className='dark:text-white'>No</button></li>
     
   </ul>
 </details>
@@ -58,7 +58,7 @@ const filterArtsByCustomization = () => {
             {
                 loading?(
                     <div className="text-center mt-10">
-                        <span className="loading loading-spinner loading-lg"></span>
+                        <span className="loading loading-spinner loading-lg dark:text-white"></span>
                     </div>
                 ): (<div className='grid md:grid-cols-3 grid-cols-1 gap-4 mt-10'>
 
