@@ -89,7 +89,7 @@ const Update = () => {
                 <div>
                 <label  className='font-lato text-lg dark:text-white'> Short description <br />
                   
-                    <input type="text" placeholder='Short description' name='short_description' defaultValue={short_description} className='p-2 dark:text-blackn mt-2 w-full border-b-black border-b-2 outline-none' />
+                    <input type="text" placeholder='Short description' name='short_description' defaultValue={short_description} className='p-2 dark:text-black mt-2 w-full border-b-black border-b-2 outline-none' />
                 </label>
              
                 </div>

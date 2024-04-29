@@ -40,7 +40,7 @@ const CraftItem = () => {
           
             {loading ? ( // Show loader when data is loading
                 <div className="text-center mt-10">
-                    <span className="loading loading-spinner loading-lg"></span>
+                    <span className="loading loading-spinner loading-lg dark:text-white"></span>
                 </div>
             ) : (
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>

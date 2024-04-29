@@ -17,7 +17,7 @@ const AllArts = () => {
           </Helmet>
         <Navbar></Navbar>
          <div className='mt-16 space-y-8'>
-        <h1 className='sm:text-5xl text-3xl text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'> Arts and Paints of all users</h1>
+        <h1 className='sm:text-5xl text-3xl dark:text-white text-[#151515] font-poppins font-bold text-center duration-500 hover:text-[#AF9F7B]'> Arts and Paints of all users</h1>
       <div>
 
 <div className="overflow-x-auto">

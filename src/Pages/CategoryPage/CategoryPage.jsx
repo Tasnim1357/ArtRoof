@@ -8,10 +8,12 @@ import { Helmet } from 'react-helmet-async';
 const CategoryPage = () => {
     const [loading, setLoading] = useState(true);
     const categories=useLoaderData()
-    useEffect(() => {
-        setLoading(false);
-    }, [categories]);
 
+    useEffect(() => {
+        if (categories && categories.length > 0) {
+            setLoading(false);
+        }
+    }, [categories]);
   
     return (
        <div>
