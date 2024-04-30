@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
-        <div >
+        <div className='overflow-x-hidden'>
              <Helmet>
             <title>ArtRoof | Home</title>
           </Helmet>
