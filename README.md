@@ -3,23 +3,21 @@
 
 ## Selected Category: Painting and Drawing
 
+## Technologies: HTML,CSS,React,Firebase Authentication,Node JS, Express JS,MongoDB
+
+## Overview:
+ <p>Welcome to ArtRoof, your creative sanctuary for showcasing the finest in drawing and painting. Dive into a world where every stroke and color tells a unique story. Whether you're an artist seeking inspiration or an art lover admiring masterpieces, ArtRoof is your platform to explore, share, and celebrate the beauty of visual art.</p>
+
 ## Features and Characteristics:
-* This website has active navbar link.
-* There is a Swiper Slider in Banner section.
-* Different art and drawing 6 items are shown in Explore our arts and drwaing section.
 * Different categories are shown from database in All art and painting categories.
-* When view details button is clicked it will redirect users to login page and users must have to log in to see details of any items as it is private.
 * If any user is not registered they can sign up in Register page which is linked in Login page.
-* After Log in users user image will be visible in navbar,when user will hover on image it will show the username and a logout button.
-* This website also includes an 2 Extra sections.
-* It has a website theme changing toggle to change the dark and light theme .
 * In My art and craft list page, any user can see their added items,update and also delete them as they needed
-* This website includes a footer section with information where users can contact with us if there is any need.
 * It is also Mobile,Tablet responsive!!!
   
-## NPM Packages used for Challenge Task:
-* Lottie React
-* React-simple-typewriter(In Homepage)
+## Implement Following Tasks to clone and run my repository code:
+* Clone repository using git clone command
+* Install npm packages : npm i 
+* Run the project with : npm run dev
 
   
 

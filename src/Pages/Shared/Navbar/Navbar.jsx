@@ -5,7 +5,6 @@ import { ThemeContext } from '../../Root/Root';
 import { MdOutlineWbSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
-
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext)
   const{handleTheme,theme}=useContext(ThemeContext)

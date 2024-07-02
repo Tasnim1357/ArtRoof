@@ -8,6 +8,8 @@ import CraftItem from '../CraftItem/CraftItem';
 import Categories from '../Categories/Categories';
 import { Helmet } from 'react-helmet-async';
 
+
+
 const Home = () => {
     return (
         <div className='overflow-x-hidden'>
@@ -21,6 +23,8 @@ const Home = () => {
             <Categories></Categories>
             <Works></Works>
             <About></About>
+          
+           
             <Footer></Footer>
         </div>
     );
